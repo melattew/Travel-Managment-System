@@ -1,0 +1,491 @@
+
+:root{
+    --aqua:#00eaff;
+}
+
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transform: all .2s linear;
+}
+
+*::selection{
+    background:var(--orange);
+    color:#ffff;
+}
+
+html{
+    font-size:62.5;
+    overflow-x:hidden ;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 7%; /*the % moves the travel logo to side*/
+    transition: 0.5s;
+}
+
+header .logo{
+font-size: 1.5rem;
+font-weight: bolder;
+color:#fff;
+text-transform: uppercase;
+text-decoration: none;
+}
+header .logo span{
+    color:var(--aqua);
+}
+header .navbar a{
+    color: #fff;
+    font-size: 1rem;
+    margin:0 .8rem;/*the space of home recommend...*/
+    text-decoration: none;/*to remove underlinefrom anchor tag*/
+}
+
+header .navbar a:hover{
+    color: rgb(43, 217, 226);
+}
+
+#menu-bar{
+    color:#000;
+    border-radius:1rem solid #000;
+    border-radius: 0.5rem;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100001;
+    display: none; 
+}
+.icons #menu-bar{
+    font-size: 2rem;
+    color:#000;
+    display:none;
+}
+.icons #menu-bar:hover{
+    color:#4468E2;
+}
+.home{
+    width: 100%;
+    min-height:640px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.home image{
+    position:absolute;
+    background-size: cover;
+    height:100vh;
+    object-fit:cover;
+    object-position:center;
+    font-size:55px;
+}
+.line
+{
+    position: relative;
+    font-family:italic;
+    font-size:300%;
+    margin:0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;transition: translateY(-50);
+}
+.anim-typewriter{
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter{
+    from{
+        width:0;
+    }
+    to{
+        width:6.5em
+    }
+}
+
+@keyframes blinkTextCursor {
+    from{
+        border-right-color:rgba(252, 246, 246, 0.979);
+    }
+    to{
+        border-right-color:transparent;
+    }
+}
+/*upcoming trip*/
+.Upcoming
+{
+    padding:100px 0;/*100 from top and buttom and 0 from left and right*/
+}
+h1
+{
+    text-align:center;
+    padding-bottom:30px;
+    font-family:'Times New Roman', Times, serif;
+}
+.wrapper{
+    width:1170px;
+    margin:0 auto;
+}
+.Upcoming-event{
+    position:relative;
+    height:350px;
+    width:350px;
+    margin: 10% auto 0;
+    color:#fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+.Upcoming-event img{
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    left: 0;
+    object-fit: cover;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition:opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+.Upcoming-event img.img-front:hover{
+    opacity:0;
+    cursor:pointer;
+}
+h7{
+    text-decoration:underline
+}
+.price{
+    width:50px;
+    height:50px;
+    background:#ff5722;
+    color:#fff;
+    font-weight:600;
+    font-size: 10px;
+    line-height: 29px;
+    border-radius:50%;
+    justify-content: center;
+    display:flex;
+    padding:10px;
+    box-shadow: 0 0 10px 1px rgba(37,73,2140.18);
+}
+.heading span{
+    color:var(--aqua);
+}
+.heading span.space{
+    font-size: 3.5rem;
+    padding:.2rem 1rem;
+}
+.book{
+    padding: 50px;
+}
+.book .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+.book .row form{
+    flex: 40rem;
+    padding: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-radius: .9rem;
+}
+
+.book .row form .inputBox{
+    padding: 1rem;
+}
+
+.book .row form .inputBox input{
+    width: 50%;
+    padding: 1rem;
+    border: 0.1rem solid rgba(0, 0, 0, .1);
+    font-size: 1rem;
+    color: #333;
+    text-transform: none;
+}
+
+.book .row form .inputBox h3{
+    font-size: 1rem;
+    padding: 1rem 0;
+    color:#666;
+    align-items: center;
+}
+/*columns background*/
+
+.im1{
+    background-image: url('../image/lalibela1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.im2{
+    background-image: url('../image/maldives1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.im3{
+    background-image: url('../image/algeria pass.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*image hover*/
+
+.ihv{/*.bc class*/
+    opacity:0;/*opacity invisible*/
+    transition-duration: 1.25s;
+}
+.ihv:hover{/*.bc class*/
+    opacity:1;/*opacity invisible*/
+}
+.blog
+{
+    padding: 100px 0;
+    background: #efefef;
+}
+.blog-box img
+{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.blog-box img:hover
+{
+     transform: scale(1.1);
+}
+.blog-box h4
+{
+    display: block;
+    color:#fff;
+    text-shadow: -2px 2px 2px #000;
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.blog-box
+{
+    position: relative;
+    margin-bottom: 30px;
+}
+.banner
+{
+    height: 80%;
+    background-image: url('../image/camp.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 30%;
+
+}
+.banner-highlights
+{
+    padding: 30px 0;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: #fff;
+}
+.banner .banner-highlights span{
+    color:cyan;
+
+}
+.btn{
+    border: 2px solid; 
+    border-radius: 10px;
+    transition: 0.35s;
+    color: #000;
+    background-color: rgb(0, 225, 255);
+    border-color: lightblue;
+    transition: 0.35s;
+
+}
+.btn a{
+    width: 120px;
+    padding: 8px 0;
+    text-decoration: none;
+    color:rgb(0, 179, 255);
+}
+.btn a:hover{
+    text-decoration: none;
+    color: #00eaff;
+    box-shadow: 0 0 10px 1px rgba(145,92,182,4);
+}
+.review
+{
+    padding: 100px 0;
+}
+.client-review{
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+    padding-bottom: 50px;
+}
+.client-review img
+{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.client-review:hover
+{
+     transform: scale(1.1);
+}
+.client-review p
+{
+    padding: 50px 10px 10px 10px;
+}
+.review img
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: -30px 0 20px 40%;
+}
+.client-review p::before{
+    content: '\201d';
+    display: block;
+    font-size: 100px;
+    color:#6495ed;
+    font-family: sans-serif;
+    left:44%;
+    top:-20px;
+}
+.client-review h5{
+    color:#6495ed;
+}
+.contact{
+    padding: 100px 0;
+    margin: 15px;
+    background-image: linear-gradient(#0e5398,#10a9fb);
+    color:white;
+}
+.footer-logo{
+    padding: 30px;
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.footer h4{
+    padding: 30px;
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.footer p{
+    font-size: 12px;
+    text-align: justify;
+    padding-right: 35px;
+}
+.footer .row .bi{
+    padding:20px;
+    font-size:15px;
+}
+.footer .copyright{
+    text-align: center;
+}
+.copyright
+{
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+@media (max-width:1200px){
+    html{
+        font-size:55%;
+    }  
+}
+
+@media (max-width:991px){
+    header{
+        padding:2rem;
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size:55%;
+    }
+    .icons #menu-bar{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%;
+        right: 0;
+        left:0;
+        background: #333;
+        border-top: .1rem solid rgba(255, 255, 255, 2);
+        padding:1rem 2rem;
+        clip-path:polygon(0 0,100% 0, 0 0);
+
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0,100% 100% 0 100%);
+    }  
+
+header .navbar a{
+    display: block;
+    border-radius: .5rem;
+    padding:1.5rem;
+    margin:1.5rem 0;
+    background: #222;
+   }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+
+
+
+
